@@ -19,5 +19,5 @@
 
 default[:directorylister][:apppool_user] = "directorylister-pool"
 default[:directorylister][:apppool_password] = "PoolAdmin123"
-default[:directorylister][:web_root] = "c:/webroot/directorylister"
+default[:directorylister][:web_root] = "c:/webroot/directorylister2"
 default[:directorylister][:log_root] = "c:/logs/directorylister"
