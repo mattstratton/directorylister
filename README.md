@@ -1,6 +1,6 @@
 directorylister Cookbook
 ========================
-TODO: Enter the cookbook description here.
+Configures servers for directorylister.
 
 e.g.
 This cookbook makes your favorite breakfast sandwich.
