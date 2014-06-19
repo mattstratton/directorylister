@@ -19,7 +19,17 @@ end
 iis_site 'directorylister' do
 	protocol :http
 	port 80
-	path node[:directorylister][:webroot]
+	path node[:directorylister][:web_root]
 	application_pool 'directorylister'
 	action [:add, :start]
 end
+
+#creates a new app
+#iis_app "directorylister" do
+#  path "/"
+#  application_pool "directorylister"
+#  physical_path node[:directorylister][:webroot]
+#  enabled_protocols "http,net.pipe"
+#  action :add
+#end
+
