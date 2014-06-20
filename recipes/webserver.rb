@@ -21,7 +21,7 @@ iis_site 'directorylister' do
 	port 80
 	path node[:directorylister][:web_root]
 	application_pool 'directorylister'
-	action [:add, :start]
+	action [:add, :config, :start]
 end
 
 #creates a new app
