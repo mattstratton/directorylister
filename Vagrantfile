@@ -65,7 +65,7 @@ config.vm.boot_timeout = 120
 
     chef.run_list = [
       "recipe[directorylister]",
-      "recipe[directorylister::webserver]",
+      "recipe[directorylister::wcfserver]",
       "recipe[minitest-handler]"
 
     ]

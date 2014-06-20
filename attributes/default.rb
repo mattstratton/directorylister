@@ -24,4 +24,5 @@ default[:directorylister][:web_root] = "c:/webroot/"
 default[:directorylister][:wcf_root] = "c:/wcfroot/"
 default[:directorylister][:log_root] = "c:/logs/"
 default[:directorylister][:wcf_server] = "localhoster:19234"
+default[:directorylister][:xmlpath] = "c:/directorylister/lookupservice/"
 #TODO - factor out port to a separate attribute maybe
