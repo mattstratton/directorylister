@@ -24,6 +24,14 @@ iis_site 'directorylister' do
 	action [:add, :config, :start]
 end
 
+template "c:/webroot/directorylister/web.config" do
+	source "web.config.webserver.erb"
+	variables({
+		:wcf_server => node[:directorylister][:wcf_server]
+
+		})
+end
+
 #creates a new app
 #iis_app "directorylister" do
 #  path "/"
