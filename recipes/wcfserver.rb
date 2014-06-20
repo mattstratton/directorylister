@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-template "#{node[:directorylister][:wcf_root]}/directorylister/web.config" do
+template "#{node[:directorylister][:wcf_root]}directorylister/web.config" do
 	source "web.config.wcfserver.erb"
 	variables({
 		:foo => "bar"
