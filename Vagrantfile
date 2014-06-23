@@ -54,20 +54,44 @@ config.vm.boot_timeout = 120
   config.berkshelf.enabled = true
 
 
-  config.vm.provision :chef_solo do |chef|
-     chef.json = {
-        :windows_users => {
-          :admin_password => 'rootpass',
-          :apppool_password => 'poolpass'
+  config.vm.define "web" do |web|
 
+    web.vm.provision :chef_solo do |chef|
+       chef.json = {
+          :windows_users => {
+            :admin_password => 'rootpass',
+            :apppool_password => 'poolpass'
+
+          }
         }
-      }
 
-    chef.run_list = [
-      "recipe[directorylister]",
-      "recipe[directorylister::wcfserver]",
-      "recipe[minitest-handler]"
+      chef.run_list = [
+        "recipe[directorylister]",
+        "recipe[directorylister::webserver]",
+        "recipe[minitest-handler]"
 
-    ]
+      ]
+    end
   end
+
+  config.vm.define "wcf" do |wcf|
+
+    wcf.vm.provision :chef_solo do |chef|
+       chef.json = {
+          :windows_users => {
+            :admin_password => 'rootpass',
+            :apppool_password => 'poolpass'
+
+          }
+        }
+
+      chef.run_list = [
+        "recipe[directorylister]",
+        "recipe[directorylister::wcfserver]",
+        "recipe[minitest-handler]"
+
+      ]
+    end
+  end
+
 end
