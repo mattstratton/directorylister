@@ -26,7 +26,7 @@ end
 iis_site 'directorylister' do
 	protocol :http
 	port 80
-	path "#{node[:directorylister][:web_root]}/directorylister"
+	path "#{node[:directorylister][:web_root]}directorylister"
 	application_pool 'directorylister'
 	action [:add, :config, :start]
 end
