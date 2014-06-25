@@ -47,7 +47,7 @@ end
 config.vm.provider "virtualbox" do |v|
   v.gui = true
 end
-config.vm.boot_timeout = 120
+config.vm.boot_timeout = 300
 
   # Enabling the Berkshelf plugin. To enable this globally, add this configuration
   # option to your ~/.vagrant.d/Vagrantfile file
