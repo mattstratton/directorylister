@@ -16,6 +16,12 @@ cookbook_file "#{handler}.rb" do
   source 'send_email.rb'
 end
 
+chef_handler 'TrueBlue::SendEmail' do
+	source handler
+	supports :report => true
+	action :enable
+end
+
 # create directory
 
 directory "#{node[:directorylister][:web_root]}directorylister" do
