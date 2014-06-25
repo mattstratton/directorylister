@@ -4,7 +4,7 @@ module TrueBlue
   class SendEmail < Chef::Handler
     def report
       message  = "From: sender_name <jbruso@trueblue.com>\n"
-      message << "To: recipient_address <mattstratton@getchef.com>\n"
+      message << "To: recipient_address <jbruso@trueblue.com>\n"
       message << "Subject: chef-client Run\n"
       message << "Date: #{Time.now.rfc2822}\n\n"
       message << "Chef updated resources on #{node.name}\n"
