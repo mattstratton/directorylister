@@ -23,11 +23,6 @@ directory node[:directorylister][:log_root]  do
  action :create
 end
 
- 
-iis_site  'Default Web Site' do
-	action [:stop, :delete]
-end
-
 
 
 
