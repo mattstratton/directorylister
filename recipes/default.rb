@@ -17,11 +17,6 @@ windows_feature 'IIS-WebServerRole' do
   action :install
 end
 
-directory node[:directorylister][:web_root] do
- recursive true
- action :create
-end
-
 
 directory node[:directorylister][:log_root]  do
  recursive true
