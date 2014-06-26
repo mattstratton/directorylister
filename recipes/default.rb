@@ -23,11 +23,6 @@ directory node[:directorylister][:log_root]  do
  action :create
 end
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 9c6d9d7eafd8f3346c12f2b337d93daaacb92141
 
 
 
