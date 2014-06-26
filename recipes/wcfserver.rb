@@ -30,12 +30,14 @@ iis_pool 'directorylister' do
     action [:add, :config]
 end
 
-iis_site 'directorylister' do
-	protocol :http
-	port 80
-	path "#{node[:directorylister][:wcf_root]}/directorylister"
+
+iis_app 'directorylister' do
+	app_name "Default Web Site"
+	path "/directorylister"
+	enabled_protocols "http"
+	physical_path "#{node[:directorylister][:wcf_root]}directorylister"
 	application_pool 'directorylister'
-	action [:add, :config, :start]
+	action [:add, :config]
 end
 
 template "#{node[:directorylister][:wcf_root]}directorylister/web.config" do
