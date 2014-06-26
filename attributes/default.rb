@@ -18,8 +18,8 @@
 #
 
 
-default[:directorylister][:apppool_user] = "svc-WaSignal"
-default[:directorylister][:apppool_password] = "Wa$ign@l"
+default[:directorylister][:apppool_user] = ".\administrator"
+default[:directorylister][:apppool_password] = "Rookie32"
 default[:directorylister][:web_root] = "c:/webroot/"
 default[:directorylister][:wcf_root] = "c:/wcfroot/directorylister/"
 default[:directorylister][:log_root] = "c:/logs/"
