@@ -18,10 +18,6 @@ describe_recipe 'directorylister::default' do
 
 	describe 'Website Configuration' do
 	    
-	    it 'creates the webroot directory' do
-	      directory(node[:directorylister][:web_root]).must_exist
-	    end
-	  
 	    it 'creates the log directory' do
 	      directory(node[:directorylister][:log_root]).must_exist
 	    end

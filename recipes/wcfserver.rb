@@ -30,7 +30,7 @@ iis_pool 'directorylister' do
     action [:add, :config]
 end
 
-
+# Creates path and assigns project to the app pool.
 iis_app 'directorylister' do
 	app_name "Default Web Site"
 	path "/directorylister"
@@ -40,6 +40,7 @@ iis_app 'directorylister' do
 	action [:add, :config]
 end
 
+# Deploys web.config file to directorylister location. 
 template "#{node[:directorylister][:wcf_root]}directorylister/web.config" do
 	source "web.config.wcfserver.erb"
 	variables({
