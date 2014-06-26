@@ -18,8 +18,8 @@
 #
 
 
-default[:directorylister][:apppool_user] = "directorylister-pool"
-default[:directorylister][:apppool_password] = "PoolAdmin123"
+default[:directorylister][:apppool_user] = "svc-WaSignal"
+default[:directorylister][:apppool_password] = "Wa$ign@l"
 default[:directorylister][:web_root] = "c:/webroot/"
 default[:directorylister][:wcf_root] = "c:/wcfroot/directorylister/"
 default[:directorylister][:log_root] = "c:/logs/"
