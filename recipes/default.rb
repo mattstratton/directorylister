@@ -17,6 +17,9 @@ windows_feature 'IIS-WebServerRole' do
   action :install
 end
 
+windows_feature 'MSMQ-Services' do
+	action :install
+end
 
 directory node[:directorylister][:log_root]  do
  recursive true
