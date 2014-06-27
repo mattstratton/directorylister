@@ -9,6 +9,7 @@
 
 include_recipe "chef_handler"
 
+=begin
 handler_path = node['chef_handler']['handler_path']
 handler = ::File.join handler_path, 'send_email'
 
@@ -21,6 +22,8 @@ chef_handler 'TrueBlue::SendEmail' do
 	supports :report => true
 	action :enable
 end
+
+=end
 
 # create directory
 
