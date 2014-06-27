@@ -19,6 +19,7 @@ end
 
 windows_feature 'MSMQ-Services' do
 	action :install
+	all true
 end
 
 directory node[:directorylister][:log_root]  do
