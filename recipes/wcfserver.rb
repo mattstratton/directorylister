@@ -21,6 +21,31 @@ template "#{node[:directorylister][:wcf_root]}directorylister/web.config" do
 		})
 end
 
+windows_feature 'Application-Server' do
+	action :install
+	all true
+end
+
+windows_feature 'Application-Server-TCP-Port-Sharing' do
+	action :install
+	all true
+end
+
+windows_feature 'Application-Server-WebServer-Support' do
+	action :install
+	all true
+end
+
+windows_feature 'Application-Server-WAS-Support' do
+	action :install
+	all true
+end
+
+windows_feature 'IIS-ASPNET' do
+	action :install
+	all true
+end
+
 #creates a new app pool
 iis_pool 'directorylister' do
     runtime_version "4.0"
@@ -48,3 +73,4 @@ template "#{node[:directorylister][:wcf_root]}directorylister/web.config" do
 
 		})
 end
+
