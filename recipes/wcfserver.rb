@@ -34,6 +34,10 @@ windows_feature 'NetFx4Extended-ASPNET45' do
 	action :install
 end
 
+windows_feature 'WCF-HTTP-Activation' do
+	action :install
+end
+
 windows_feature 'Application-Server-TCP-Port-Sharing' do
 	action :install
 	all true
