@@ -11,10 +11,12 @@
 # attribute
 windows_feature 'NetFx4Extended-ASPNET45' do
   action :install
+  all true
 end
 
 windows_feature 'IIS-WebServerRole' do
   action :install
+  all true
 end
 
 windows_feature 'MSMQ-Services' do
