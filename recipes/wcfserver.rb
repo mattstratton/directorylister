@@ -51,6 +51,7 @@ end
 
 windows_feature 'Application-Server-HTTP-Activation' do
 	action :install
+	all true
 end
 
 windows_feature 'IIS-ASPNET' do
