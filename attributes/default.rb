@@ -20,9 +20,9 @@
 
 default[:directorylister][:apppool_user] = "administrator"
 default[:directorylister][:apppool_password] = "Rookie32"
-default[:directorylister][:web_root] = "c:/webroot/"
-default[:directorylister][:wcf_root] = "c:/wcfroot/"
-default[:directorylister][:log_root] = "c:/logs/"
+default[:directorylister][:web_root] = "c:\\webroot\\"
+default[:directorylister][:wcf_root] = "c:\\wcfroot\\"
+default[:directorylister][:log_root] = "c:\\logs\\"
 default[:directorylister][:wcf_server] = "localhoster:19234/directorylister"
-default[:directorylister][:xmlpath] = "c:/directorylister/"
+default[:directorylister][:xmlpath] = "c:\\directorylister\\"
 #TODO - factor out port to a separate attribute maybe
