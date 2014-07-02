@@ -21,10 +21,12 @@ end
 
 windows_feature 'IIS-NetFxExtensibility45' do
 	action :install
+	all true
 end
 
 windows_feature 'NetFx4Extended-ASPNET45' do
 	action :install
+	all true
 end
 
 windows_feature 'Application-Server-TCP-Port-Sharing' do
