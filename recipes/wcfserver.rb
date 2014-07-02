@@ -21,7 +21,27 @@ template "#{node[:directorylister][:wcf_root]}directorylister/web.config" do
 		})
 end
 
+windows_feature 'NetFx4ServerFeatures' do
+	action :install
+	all true
+end
+
+windows_feature 'NetFx4' do
+	action :install
+	all true
+end
+
+windows_feature 'NetFx4Extended-ASPNET45' do
+	action :install
+	all true
+end
+
 windows_feature 'Application-Server' do
+	action :install
+	all true
+end
+
+windows_feature 'AS-NET-Framework' do
 	action :install
 	all true
 end
